@@ -1,0 +1,944 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{multicol}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing other 0.6
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.5cm
+\topmargin 0.5cm
+\rightmargin 0.5cm
+\bottommargin 0.5cm
+\headheight 0.5cm
+\headsep 0.5cm
+\footskip 0.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsubsection*
+Unit Vector: 
+\begin_inset Formula $\frac{\vec{a}}{|\vec{a}|}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+columnsep}{0.5cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+columnseprule}{0.2pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Dot Product:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{a}\cdot\vec{b}=|\vec{a}||\vec{b}|cos\theta$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{a}=<a_{1},a_{2},a_{3}>$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{b}=<b_{1},b_{2},b_{3}>$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{a}\cdot\vec{b}=a_{1}b_{1}+a_{2}b_{2}+a_{3}b_{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{a}\cdot\vec{b}=0,\vec{a}\perp\vec{b}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Cross Product:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|\vec{a}\times\vec{b}|=|\vec{a}||\vec{b}|sin\theta$
+\end_inset
+
+ OR
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{a}\times\vec{b}=\begin{array}{ccc}
+\vec{i} & \vec{j} & \vec{k}\\
+a_{1} & a_{2} & a_{3}\\
+b_{1} & b_{2} & b_{3}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=(a_{2}b_{3}-a_{3}b_{2})\vec{i}-(a_{1}b_{3}-a_{3}b_{1})\vec{j}-(a_{1}b_{2}-a_{2}b_{1})\vec{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{u}\cdot(\vec{v}\times\vec{w})=\begin{array}{ccc}
+u_{1} & u_{2} & u_{3}\\
+v_{1} & v_{2} & v_{3}\\
+w_{1} & w_{2} & w_{3}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{a}\times\vec{b}=\vec{0},\vec{a}\parallel\vec{b}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Area of a Parellelogram: 
+\begin_inset Formula $|\vec{a}\times\vec{b}|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Volume of a Parallelepiped: 
+\begin_inset Formula $|\vec{a}\cdot(\vec{b}\times\vec{c})|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Scalar projection of 
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+ onto 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+: 
+\begin_inset Formula $Comp_{\vec{a}}\vec{b}=\frac{\vec{a}\cdot\vec{b}}{|\vec{a}|}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vector projection of 
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+ onto 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+: 
+\begin_inset Formula $Proj_{\vec{a}}\vec{b}=\frac{\vec{a}\cdot\vec{b}}{|\vec{a}|^{2}}(\vec{a})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+columnsep}{0.5cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+columnseprule}{0.2pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Vector Equation:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{r}=\vec{r_{0}}+t\vec{v}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{r}=<x,y,z>$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{r_{0}}=<x_{0},y_{0},z_{0}>$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{v}=<a,b,c>$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $t\vec{v}=<at,bt,ct>$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Parametric Equations:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x=x_{0}+at$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y=y_{0}+bt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $z=z_{0}+ct$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P_{o}(x_{0},y_{0},z_{0})\parallel\vec{v}=<a,b,c>$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Symmetric Equations:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{x-x_{0}}{a}=\frac{y-y_{0}}{b}=\frac{z-z_{0}}{c}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Plane:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a(x-x_{0})+b(y-y_{0})+c(z-z_{0})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+columnsep}{0.5cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+columnseprule}{0.2pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Angle Between Planes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $cos\theta=\frac{n_{1}\cdot n_{2}}{|n_{1}||n_{2}|}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Distance from Point to Plane: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $D=\frac{|n\cdot b|}{|n|}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{b}=<x_{1}-x_{0},y_{1}-y_{0},z_{1}-z_{0}>$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{n}=<a,b,c>$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $D=\frac{|ax+by+cz+d|}{\sqrt{a^{2}+b^{2}+c^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ellipsoid: 
+\begin_inset Formula $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Elliptic Paraboloid: 
+\begin_inset Formula $\frac{z}{c}-\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hyperbolic Paraboloid: 
+\begin_inset Formula $\frac{z}{c}=\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cone: 
+\begin_inset Formula $\frac{z^{2}}{c^{2}}=\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hyperboloid of One Sheet: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hyperboloid of Two Sheets:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{-z^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+columnsep}{0.5cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+columnseprule}{0.2pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Vector Calculus:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underset{t\rightarrow a}{lim}\vec{r}(t)=<\text{\ensuremath{\underset{t\rightarrow a}{lim}f(t),\underset{t\rightarrow a}{lim}g(t),\underset{t\rightarrow a}{lim}h(t)>}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{r}'(t)=<f'(t),g'(t),h'(t)>=f'(t)\vec{i}+g'(t)\vec{j}+h'(t)\vec{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{d}{dt}(\vec{u}+\vec{v})=\vec{u}'+\vec{v}'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(c\vec{u})'=c\vec{u}'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{d}{dt}(f(t)\vec{u}(t))=f'(t)\vec{u}(t)+f(t)\vec{u}'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{d}{dt}(\vec{u}\cdot\vec{v})=\vec{u}'\cdot\vec{v}+\vec{u}\cdot\vec{v}'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{d}{dt}(\vec{u}\times\vec{v})=\vec{u'}\times\vec{v}+\vec{u}\times\vec{v}'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{d}{dt}(\vec{u}(f(t))=f'(t)\vec{u}'(f(t))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int\vec{r}(t)dt=<\int f(t)dt,\int g(t)dt,\int h(t)dt>+\vec{c}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int\vec{r}(t)dt=\int f(t)dt\vec{i}+\int g(t)dt\vec{j}+\int h(t)dt\vec{k}+\vec{c}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+columnsep}{0.5cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+columnseprule}{0.2pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Arc Length: 
+\begin_inset Formula $L=\stackrel[a]{b}{\int}|r'(t)|dt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Unit Tangent Vector: 
+\begin_inset Formula $\vec{T}(t)=\frac{\vec{r}'(t)}{|\vec{r}'(t)'|}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Curvature 
+\begin_inset Formula $\kappa(t)=\frac{|\vec{T}'(t)|}{|\vec{r}'(t)|}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Unit Normal Vector: 
+\begin_inset Formula $\vec{N}(t)=\frac{\vec{T}'(t)}{|\vec{T}'(t)|}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Binormal Vector: 
+\begin_inset Formula $\vec{B}(t)=\vec{T}(t)\times\vec{N}(t)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Velocity: 
+\begin_inset Formula $r'(t)$
+\end_inset
+
+ Acceleration: 
+\begin_inset Formula $r''(t)$
+\end_inset
+
+ Speed: 
+\begin_inset Formula $|r'(t)|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
