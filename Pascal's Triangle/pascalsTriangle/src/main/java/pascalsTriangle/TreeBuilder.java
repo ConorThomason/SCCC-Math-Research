@@ -1,46 +1,28 @@
 package pascalsTriangle;
 
-import graph.VisEdge;
-import graph.VisGraph;
-import graph.VisNode;
+import com.fxgraph.cells.RectangleCell;
+import com.fxgraph.graph.Graph;
+import com.fxgraph.graph.ICell;
+import com.fxgraph.graph.Model;
+import com.fxgraph.*;
 
 public class TreeBuilder {
 	private PascalTree tree;
-	private VisGraph graph;
+	private Graph graph = new Graph();
+	private Model model = graph.getModel();
 	private PascalNode currentNode;
 
 	public TreeBuilder(int initialSize) {
 		this.tree = new PascalTree(initialSize);
-		graph = new VisGraph();
 		buildGraph();
 	}
 	public void buildGraph() {
-		currentNode = tree.getRootNode();
-		PascalNode initialNode = currentNode;
-		int nodeId = 1;
-		VisNode node = new VisNode(1, currentNode.getValue().toString());
-		VisNode leftNode;
-		VisNode rightNode;
-		VisEdge leftEdge;
-		VisEdge rightEdge;
-		graph.addNodes(node);
-		do {
-			do  {
-				leftNode = new VisNode(nodeId++, currentNode.getNextLeft().getValue().toString());
-				rightNode = new VisNode(nodeId++, currentNode.getNextRight().getValue().toString());
-				leftEdge = new VisEdge(node, leftNode, "", "");
-				rightEdge = new VisEdge(node, rightNode, "", "");
-				graph.addNodes(leftNode, rightNode);
-				graph.addEdges(leftEdge, rightEdge);
-				if (currentNode.hasPreviousRight()) {
-					currentNode = currentNode.getPreviousRight();
-					currentNode = currentNode.getNextRight();
-				}
-			} while (currentNode.hasPreviousRight());
-			initialNode = initialNode.getNextLeft();
-		} while (initialNode.hasNextLeft());
+		graph.beginUpdate();
+		final ICell cell = new RectangleCell();
+		model.addCell(cell);
+		graph.endUpdate();
 	}
-	public VisGraph getGraph() {
+	public Graph getGraph() {
 		return graph;
 	}
 }
