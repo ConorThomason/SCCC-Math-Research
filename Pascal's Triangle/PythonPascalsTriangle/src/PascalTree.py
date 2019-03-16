@@ -40,7 +40,7 @@ class PascalTree:
         
     def printTree(self):
         currentNode = self.rootNode
-        for i in range(self.rowCount):
+        for __ in range(self.rowCount):
             self.printRow(currentNode)
             currentNode = currentNode.get_next_left()
             
@@ -57,29 +57,29 @@ class PascalTree:
                     break
         print(printString)
 	
+    def getRootNode(self):
+        return self.rootNode
+    
     def getNodeCount(self):
-        currentRowCount = rowCount
-        nodeCount = 0
-        for __ in currentRowCount:
-	        nodeCount = nodeCount + currentRowCount
-	        currentRowCount = currentRowCount - 1
-        return nodeCount
+        n = self.rowCount - 1
+        n = (n*(n+1))//2
+        return n
     def getRowCount(self):
         return self.rowCount
 		
     def getRow(self, rowNum):
         currentNode = self.rootNode	
-        while currentNode.get_next_left() != None:
+        for __ in range(rowNum):
             currentNode = currentNode.get_next_left()
 		#node still exists here
         valueList = []
-        if currentNode.get_next_left != None and currentNode.get_next_right != None and currentNode.get_previous_right != None:
-            while True:
+        valueList.append(1)
+        while True:
+            if currentNode.get_value() != 1:
                 currentNode = currentNode.get_previous_right()
                 currentNode = currentNode.get_next_right()
                 valueList.append(currentNode.get_value())
-                if currentNode.get_value == 1:
-                    break
-        else:
-            valueList.append(1)
+            else:
+                valueList.append(1)
+                break
         return valueList
