@@ -57,6 +57,5 @@ class GraphGenerator:
             currentY = currentY - 5
             baseX = baseX - 5 
         print(self.pos)
-        
     def getPos(self):
         return self.pos
