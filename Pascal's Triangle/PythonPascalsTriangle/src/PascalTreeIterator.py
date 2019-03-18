@@ -1,7 +1,9 @@
 class PascalTreeIterator:
+    rootNode = None
     currentNode = None
     currentRow = 0
     def __init__(self, tree):
+        self.rootNode = tree.getRootNode()
         self.currentNode = tree.getRootNode()
         
     def orderedNextNode(self):
@@ -20,6 +22,7 @@ class PascalTreeIterator:
         else:
             self.moveRight()
     
+    
     def moveLeft(self):
         #Will do nothing if it can't move any further along the row.
         if self.currentNode.get_previous_left() != None and self.currentNode.get_next_left() != None:
@@ -30,12 +33,24 @@ class PascalTreeIterator:
         if self.currentNode.get_previous_right() != None and self.currentNode.get_next_right() != None:
             self.currentNode = self.currentNode.get_previous_right()
             self.currentNode = self.currentNode.get_next_left()
-            
+    
+    def hasNextRowLeft(self):
+        if self.currentNode.get_next_left() != None:
+            return True
+        
+        return False
+    def hasNextRowRight(self):
+        if self.currentNode.get_next_right() != None:
+            return True
+        
+        return False
     def nextRowLeft(self):
-        self.currentNode = self.currentNode.get_next_left()
+        if self.hasNextRowLeft():
+            self.currentNode = self.currentNode.get_next_left()
     
     def nextRowRight(self):
-        self.currentNode = self.currentNode.get_next_right()
+        if self.hasNextRowRight():
+            self.currentNode = self.currentNode.get_next_right()
         
     def getCurrentNode(self):
         return self.currentNode
@@ -47,3 +62,5 @@ class PascalTreeIterator:
             return False
         else:
             return True
+    def goToRoot(self):
+        self.currentNode = self.rootNode
