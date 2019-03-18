@@ -1,3 +1,4 @@
+
 class PascalTreeIterator:
     rootNode = None
     currentNode = None
@@ -12,17 +13,28 @@ class PascalTreeIterator:
         if self.currentNode.get_value() == 1:
             if self.currentNode.get_next_right() == None:
                 nextRowCheck = False
-        
+            if nextRowCheck != False:
+                if self.hasRight() != True:
+                    continueCheck = False
+                    
         if continueCheck == False and nextRowCheck == True:
             while self.currentNode.get_previous_left != None:
-                self.moveLeft(self)
-            self.nextRowLeft(self)
+                self.moveLeft()
+            self.nextRowLeft()
         elif nextRowCheck == False:
             pass
         else:
             self.moveRight()
     
-    
+    def hasRight(self):
+        if self.currentNode.get_previous_right() != None:
+            if self.currentNode.get_previous_right().get_next_right() != None:
+                return True
+        return False
+    def hasLeft(self):
+        if self.currentNode.get_previous_left().get_next_left() != None:
+            return True
+        return False
     def moveLeft(self):
         #Will do nothing if it can't move any further along the row.
         if self.currentNode.get_previous_left() != None and self.currentNode.get_next_left() != None:
