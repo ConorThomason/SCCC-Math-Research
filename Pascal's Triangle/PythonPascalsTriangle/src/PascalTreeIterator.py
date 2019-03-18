@@ -5,46 +5,39 @@ class PascalTreeIterator:
     currentRow = 0
     def __init__(self, tree):
         self.rootNode = tree.getRootNode()
-        self.currentNode = tree.getRootNode()
+        self.currentNode = self.rootNode
         
     def orderedNextNode(self):
-        continueCheck = True
-        nextRowCheck = True
-        if self.currentNode.get_value() == 1:
-            if self.currentNode.get_next_right() == None:
-                nextRowCheck = False
-            if nextRowCheck != False:
-                if self.hasRight() != True:
-                    continueCheck = False
-                    
-        if continueCheck == False and nextRowCheck == True:
-            while self.currentNode.get_previous_left != None:
-                self.moveLeft()
-            self.nextRowLeft()
-        elif nextRowCheck == False:
-            pass
-        else:
+        if self.hasRight():
             self.moveRight()
+        else:
+            if self.hasNextRowRight():
+                while self.hasLeft():
+                    self.moveLeft()
+                self.nextRowLeft()
     
     def hasRight(self):
         if self.currentNode.get_previous_right() != None:
             if self.currentNode.get_previous_right().get_next_right() != None:
                 return True
         return False
-    def hasLeft(self):
-        if self.currentNode.get_previous_left().get_next_left() != None:
+    def isRootNode(self):
+        if self.currentNode.get_previous_left() == None and self.currentNode.get_previous_right() == None:
             return True
+        return False
+    def hasLeft(self):
+        if self.currentNode.get_previous_left():
+            if self.currentNode.get_previous_left().get_next_left() != None:
+                return True
         return False
     def moveLeft(self):
         #Will do nothing if it can't move any further along the row.
-        if self.currentNode.get_previous_left() != None and self.currentNode.get_next_left() != None:
-            self.currentNode = self.currentNode.get_previous_left()
-            self.currentNode = self.currentNode.get_next_left()
+        self.currentNode = self.currentNode.get_previous_left()
+        self.currentNode = self.currentNode.get_next_left()
             
     def moveRight(self):
-        if self.currentNode.get_previous_right() != None and self.currentNode.get_next_right() != None:
-            self.currentNode = self.currentNode.get_previous_right()
-            self.currentNode = self.currentNode.get_next_left()
+        self.currentNode = self.currentNode.get_previous_right()
+        self.currentNode = self.currentNode.get_next_right()
     
     def hasNextRowLeft(self):
         if self.currentNode.get_next_left() != None:

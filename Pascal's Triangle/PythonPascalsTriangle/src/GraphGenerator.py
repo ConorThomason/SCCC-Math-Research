@@ -38,6 +38,7 @@ class GraphGenerator:
             self.labels[i] = labelString
             self.iterator.orderedNextNode()
         print(self.labels)
+        
     def getLabels(self):
         return self.labels
     
