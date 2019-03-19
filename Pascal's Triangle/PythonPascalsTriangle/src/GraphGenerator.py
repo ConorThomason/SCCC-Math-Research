@@ -1,12 +1,15 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
+import holoviews as hv
 from networkx.drawing.nx_agraph import write_dot, graphviz_layout
 from PascalTreeIterator import PascalTreeIterator
 class GraphGenerator:
     iterator = None
     G = None
     labels = {}
+    labelTable = None
     pos = {}
     nodeCount = 0
     def __init__(self, tree):
@@ -35,15 +38,17 @@ class GraphGenerator:
                 currentNode = currentNode + 1
                 
     def generateNodeLabels(self, tree):
+        
         for i in range(tree.getNodeCount()):
             labelString = str(self.iterator.getCurrentNode().get_value())
             self.labels[i] = labelString
             self.iterator.orderedNextNode()
         print(self.labels)
-    
+        self.labelTable = hv.Table(self.labels)
+    def getLabelTable(self):
+        return self.labelTable
     def getLabels(self):
         return self.labels
-    
     def generatePos(self, tree):
         scaleFactor = tree.getNodeCount()
         currentNode = 0

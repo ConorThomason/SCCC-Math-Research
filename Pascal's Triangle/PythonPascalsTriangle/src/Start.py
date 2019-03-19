@@ -6,10 +6,13 @@ import numpy as np
 import pandas as pd
 import holoviews as hv
 
+from holoviews import opts
+
 tree = PascalTree(10)		
 #At this point, the outerlying labels have been established.
 generator = GraphGenerator(tree)
 
+hv.extension('matplotlib')
 
 #nx.draw_networkx(generator.getGraph(), generator.getPos(), labels=generator.getLabels(), with_labels=True)
 nx.draw_networkx(generator.getGraph(), generator.getPos(), labels=generator.getLabels(), with_labels=True)
@@ -17,8 +20,9 @@ nx.draw_networkx(generator.getGraph(), generator.getPos(), labels=generator.getL
 #n.from_nx(generator.getGraph())
 #n.toggle_physics(False)
 #n.show("ex.html")
-graph = hv.Graph.from_networkx(generator.getGraph(), generator.getPos())
-#labels = hv.Labels(graph.nodes, ['x','y'], generator.getLabels())
+finalGraph = generator.getGraph()
+graph = hv.Graph.from_networkx(finalGraph, generator.getPos())
+
 #(graph * labels.opts(text_font_size='8pt', text_color='white', bgcolor='gray'))
 
 renderer = hv.renderer('bokeh')
