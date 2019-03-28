@@ -8,7 +8,7 @@ import holoviews as hv
 
 from holoviews import opts
 
-tree = PascalTree(10)		
+tree = PascalTree(20)		
 #At this point, the outerlying labels have been established.
 generator = GraphGenerator(tree)
 
@@ -22,6 +22,8 @@ nx.draw_networkx(generator.getGraph(), generator.getPos(), labels=generator.getL
 #n.show("ex.html")
 finalGraph = generator.getGraph()
 graph = hv.Graph.from_networkx(finalGraph, generator.getPos())
+
+%%opts Distribution [width=600 height=400]
 
 #(graph * labels.opts(text_font_size='8pt', text_color='white', bgcolor='gray'))
 
@@ -39,8 +41,3 @@ tree.printTree()
 #app = Viewer(generator.getGraph())
 #app.mainloop()
 print("Complete")
-
-
-#Current issues:
-#Node has no position - Node count is going to 65?
-#Labels aren't generating properly (all 1s)
