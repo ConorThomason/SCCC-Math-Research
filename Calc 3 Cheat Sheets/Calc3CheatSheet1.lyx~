@@ -87,6 +87,12 @@
 
 \begin_body
 
+\begin_layout Section*
+
+\bar under
+Test 1 Content
+\end_layout
+
 \begin_layout Subsubsection*
 Unit Vector: 
 \begin_inset Formula $\frac{\vec{a}}{|\vec{a}|}$
@@ -210,13 +216,6 @@ Cross Product:
 a_{1} & a_{2} & a_{3}\\
 b_{1} & b_{2} & b_{3}
 \end{array}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $=(a_{2}b_{3}-a_{3}b_{2})\vec{i}-(a_{1}b_{3}-a_{3}b_{1})\vec{j}-(a_{1}b_{2}-a_{2}b_{1})\vec{k}$
 \end_inset
 
 
@@ -919,6 +918,363 @@ Velocity:
 
  Speed: 
 \begin_inset Formula $|r'(t)|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{5}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+columnsep}{0.5cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+columnseprule}{0.2pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Test 2 Content
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+columnsep}{0.5cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+columnseprule}{0.2pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Partial Derivatives, Differentials and Rules:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{x}=\frac{\partial f}{\partial x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(x,y)\approx L(x,y)=f(x_{0},y_{0})+f_{x}(x_{0},y_{0})(x-x_{0})+f_{y}(x_{0},y_{0})(y-y_{0})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(f_{x})_{x}=f_{xx}=\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial x}\right)=\frac{\partial^{2}f}{\partial x^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{xy}=f_{yx}(usually)=\frac{\partial}{\partial y}\left(\frac{\partial f}{\partial x}\right)=\frac{\partial^{2}f}{\partial y\partial x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $dz=f_{x}dx+f_{y}dy$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $dw=g_{x}dx+g_{y}dy+g_{z}dz$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{dz}{dt}=\frac{\partial f}{\partial x}\frac{dx}{dt}+\frac{\partial f}{\partial y}\frac{dy}{dt}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If partial, 
+\begin_inset Formula $\frac{\partial z}{\partial s}=\frac{\partial f}{\partial x}\frac{\partial x}{\partial s}+\frac{\partial f}{\partial y}\frac{\partial y}{\partial s}$
+\end_inset
+
+and
+\begin_inset Formula $\frac{\partial z}{\partial t}=\frac{\partial f}{\partial x}\frac{\partial x}{\partial t}+\frac{\partial f}{\partial y}\frac{\partial y}{\partial t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In general, 
+\begin_inset Formula $\frac{\partial z}{\partial t_{i}}=\frac{\partial z}{\partial x_{1}}\frac{\partial x_{1}}{\partial t_{i}}+\frac{\partial z}{\partial x_{2}}\frac{\partial x_{2}}{\partial t_{i}}+...+\frac{\partial z}{\partial x_{n}}\frac{\partial x_{n}}{\partial t_{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Implicit: 
+\begin_inset Formula $F_{x}+F_{y}\frac{dy}{dx}=0\longrightarrow\frac{dy}{dx}=-\frac{Fx}{Fy}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial z}{\partial x}=-\frac{F_{x}}{F_{Z}},\frac{\partial z}{\partial y}=-\frac{F_{Y}}{F_{Z}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Directional/Gradient Vectors:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla f(x_{0},y_{0})\perp f(x,y)=k$
+\end_inset
+
+ at the point 
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla f(x_{0},y_{0},z_{0})\perp f(x,y,z)=k$
+\end_inset
+
+ at the point 
+\begin_inset Formula $(x_{0},y_{0},z_{0})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gradient Vector: 
+\begin_inset Formula $\nabla f=<f_{x},f_{y},f_{z}>$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Directional Vector: 
+\begin_inset Formula $D_{u}f=\nabla f\cdot\vec{u}=|\nabla f||\vec{u}|cos\theta=|\nabla f|cos\theta$
+\end_inset
+
+Given a unit vector 
+\begin_inset Formula $\vec{u}=<a,b>$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Extrema:
+\end_layout
+
+\begin_layout Standard
+Relative:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $D=D(a,b)=f_{xx}(a,b)f_{yy}(a,b)-\text{\ensuremath{[f_{xy}(a,b)]^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If D>0 and 
+\begin_inset Formula $f_{xx}(a,b)>0$
+\end_inset
+
+, relative min
+\end_layout
+
+\begin_layout Standard
+If D>0 and 
+\begin_inset Formula $f_{xx}(a,b)<0$
+\end_inset
+
+, relative max
+\end_layout
+
+\begin_layout Standard
+If D<0, saddle
+\end_layout
+
+\begin_layout Standard
+If D=0, may be any of the above.
+\end_layout
+
+\begin_layout Standard
+Extreme Value Theorem:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+If 
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+ is continuous in some closed, bounded set D in 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+then there are points in D, 
+\begin_inset Formula $(x_{1},y_{1})$
+\end_inset
+
+ and 
+\begin_inset Formula $(x_{2},y_{2})$
+\end_inset
+
+ so that 
+\begin_inset Formula $f(x_{1},y_{1})$
+\end_inset
+
+ and 
+\begin_inset Formula $f(x_{2},y_{2})$
+\end_inset
+
+ are the absolute max and min respectively.
+\end_layout
+
+\begin_layout Standard
+Lagrange Multipliers:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lambda$
+\end_inset
+
+- the Lagrange Multiplier
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla f(x,y,z)=\lambda\nabla g(x,y,z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g(x,y,z)=k$
 \end_inset
 
 

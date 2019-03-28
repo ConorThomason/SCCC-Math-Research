@@ -1,0 +1,8 @@
+install.packages("igraph") 
+install.packages("network") 
+install.packages("sna")
+install.packages("visNetwork")
+install.packages("threejs")
+install.packages("networkD3")
+install.packages("ndtv")
+install.packages("reticulate")
