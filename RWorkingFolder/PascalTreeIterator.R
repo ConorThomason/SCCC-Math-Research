@@ -94,6 +94,7 @@ setMethod("hasNextRowRight", "PascalTreeIterator", function(object){
   if(is.null(object@currentNode@nextLeft)== FALSE){
     return(TRUE)
   }
+  return(FALSE)
 }
 )
 setGeneric("goToRoot", function(object) standardGeneric("goToRoot"))
